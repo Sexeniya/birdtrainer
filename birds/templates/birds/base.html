@@ -1,0 +1,20 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bird Trainer</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <h1>🐦 Bird Trainer</h1>
+    <nav>
+        <a href="{% url 'home' %}">Главная</a> |
+        <a href="{% url 'bird_list' %}">Список птиц</a> |
+        <a href="{% url 'add_bird' %}">Добавить птицу</a> |
+        <a href="{% url 'quiz' %}">Квиз</a>
+    </nav>
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+</html>
